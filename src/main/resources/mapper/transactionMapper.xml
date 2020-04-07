@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.minji.demo.api.dao.TransactionDAO">
+
+    <select id="selectTest" resultType="com.minji.demo.api.vo.MaxPriceCustomDTO">
+
+        SELECT
+            year(A.date) as year,
+            B.accountName as name,
+            A.accountNum as acctNo,
+            sum(A.price-A.fees) as sumAmt
+        FROM
+            transactionInform A
+            LEFT OUTER JOIN accountInform B ON A.accountNum = B.accountNum
+        WHERE
+            A.isCanceled = 0
+        GROUP BY
+            year(A.date), A.accountNum
+
+    </select>
+
+</mapper>

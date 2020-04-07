@@ -36,6 +36,4 @@ public class H2Runner implements ApplicationRunner {
             statement.executeUpdate(sql);
         }
     }
-
-
 }
