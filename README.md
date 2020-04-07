@@ -6,12 +6,6 @@
 
 IntelliJ 에서 Sprint boot 를 이용한 Rest API
 
-### Sprint Boot
-
-```
-Give examples
-```
-
 ### H2
 
 자바 기반의 RDBMS
