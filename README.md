@@ -8,8 +8,7 @@ IntelliJ 에서 Sprint boot 를 이용한 Rest API
 
 ### H2
 
-자바 기반의 RDBMS
-DB 서버가 꺼지면 모든 데이터가 유실
+자바 기반의 RDBMS 이고, DB 서버가 꺼지면 모든 데이터가 유실된다.
 
 #### build.gradle
 
@@ -29,8 +28,7 @@ spring.h2.console.enabled = true
 
 #### h2 console
 
-기본 설정 접속 http://localhost:8080/h2-console
-접속 후 connect 하면 콘솔에서 쿼리문 작성 가능
+기본 설정 콘솔 접속 url은 http://localhost:8080/h2-console 이다. 접속 후, connect 하면 콘솔에서 쿼리문 작성이 가능하다.
 
 #### ApplicationRunner
 
